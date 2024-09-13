@@ -13,6 +13,11 @@ jobs:
       - name: Checkout the repository
         uses: actions/checkout@v3
 
+      - name: HTML Lint Check
+        uses: tleskin/htmlhint-action@v1
+        with:
+          args: "*.html"
+
       - name: Deploy to GitHub Pages
         if: github.event.pull_request.merged == true  # Deploy only when the PR is merged
         uses: peaceiris/actions-gh-pages@v4
