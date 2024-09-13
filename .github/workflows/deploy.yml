@@ -1,0 +1,22 @@
+name: Deploy to GitHub Pages
+
+on:
+  pull_request:
+    branches:
+      - main  # Run when a pull request is made to the main branch
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v3
+
+      - name: Deploy to GitHub Pages
+        if: github.event.pull_request.merged == true  # Deploy only when the PR is merged
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build  # Adjust this based on your project's output directory
+          branch: main  # Deploy to the main branch
