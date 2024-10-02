@@ -29,46 +29,59 @@
         .skill-section {
             padding: 40px 0;
         }
-
+    
         .skill-card {
             background-color: #fff;
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease-in-out;
+            min-height: 250px; /* Ensures equal height */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
-
+    
         .skill-card:hover {
             transform: translateY(-10px);
         }
-
+    
         .skill-logo {
             width: 50px;
             height: 50px;
         }
-
+    
         .section-title {
             text-align: center;
             font-weight: bold;
             font-size: 2rem;
             margin-bottom: 40px;
         }
-
-        #additionalContentWiga {
-            display: none;
+    
+        /* Adjustments for readability */
+        .skill-card h6 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
         }
-
-        #additionalContentWiga.show {
-            display: block;
+    
+        .skill-card p {
+            font-size: 0.9rem;
+            line-height: 1.6;
         }
-        #additionalContentWik {
-            display: none;
+    
+        /* Ensures that content inside the cards does not overflow */
+        .skill-card p img {
+            margin-right: 8px;
         }
-
-        #additionalContentWik.show {
-            display: block;
+    
+        @media (min-width: 768px) {
+            .skill-card {
+                min-height: 200px; /* Larger min height for bigger screens */
+            }
         }
     </style>
+    
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="51">
@@ -379,68 +392,6 @@
                         </div>
                     </div>
 
-                    <!-- Toggle Button -->
-                    <div class="text-center mb-4">
-                        <button id="toggleButtonWiga" class="btn btn-outline-primary">Show More</button>
-                    </div>
-                    <!-- Additional Content for "What I'm Good At" Section start-->
-                    <div id="additionalContentWiga">
-                        <div class="row text-center">
-                            <!-- First Row: Languages & IDEs -->
-                            <div class="col-md-6 mb-4">
-                                <div class="skill-card">
-                                    <h6><i class="fas fa-code"></i> Languages</h6>
-                                    <p style="font-size: 0.75rem; line-height: 1.5;">
-                                        <img src="img/icon/dart.png" alt="Dart Icon" class="skill-logo"
-                                            style="width: 24px; height: 24px;"> Dart,
-                                        <img src="img/icon/java.png" alt="Java Icon" class="skill-logo"
-                                            style="width: 24px; height: 24px;"> Java,
-                                        <img src="img/icon/kotlin.png" alt="Kotlin Icon" class="skill-logo"
-                                            style="width: 24px; height: 24px;"> Kotlin
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="col-md-6 mb-4">
-                                <div class="skill-card">
-                                    <h5><i class="fas fa-laptop-code"></i> IDEs</h5>
-                                    <p style="font-size: 0.75rem; line-height: 1.5;">
-                                        <img src="img/icon/android_studio.png" alt="Android Studio Icon"
-                                            class="skill-logo" style="width: 24px; height: 24px;">
-                                        Android Studio,
-                                        <img src="img/icon/intellij.png" alt="IntelliJ Icon" class="skill-logo"
-                                            style="width: 24px; height: 24px;">
-                                        IntelliJ IDEA
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Second Row: Databases & Other Technologies -->
-                        <div class="row text-center">
-                            <div class="col-md-6 mb-4">
-                                <div class="skill-card">
-                                    <h5><i class="fas fa-database"></i> Databases</h5>
-                                    <p style="font-size: 0.75rem; line-height: 1.5;">
-                                        <img src="img/icon/mysql.png" alt="MySQL Icon" class="skill-logo"
-                                            style="width: 24px; height: 24px;">
-                                        MySQL,
-                                        <img src="img/icon/sqlite.png" alt="SQLite Icon" class="skill-logo"
-                                            style="width: 24px; height: 24px;"> SQLite
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="col-md-6 mb-4">
-                                <div class="skill-card">
-                                    <h5><i class="fas fa-cloud"></i> Other Technologies</h5>
-                                    <p style="font-size: 0.75rem; line-height: 1.5;">
-                                        <img src="img/icon/firebase.png" alt="Firebase Icon" class="skill-logo"
-                                            style="width: 24px; height: 24px;">
-                                        Firebase
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
 
                     <!-- Additional Content for "What I'm Good At" Section end-->
 
@@ -451,101 +402,129 @@
                             <div class="skill-section">
                                 <h2 class="section-title">I'm Also Good At</h2>
 
-                                <!-- First Row: Main Skills -->
-                                <div class="row text-center mb-4">
-                                    <!-- Laravel -->
+                                <!-- FirstRow: Framwork & Languages -->
+                                <div class="row text-center">
+                                    <!-- Framwork-->
                                     <div class="col-md-6 mb-4">
                                         <div class="skill-card">
-                                            <img src="img/icon/laravel.png" alt="Laravel Logo" class="skill-logo mb-3"
-                                                style="width: 60px; height: 60px;">
-                                            <h5>Laravel</h5>
+                                            <h6><i class="fas fa-cogs"></i> Framworks </h6>
+                                            <p style="font-size: 0.75rem; line-height: 1.5;">
+                                                <img src="img/icon/laravel.png" alt="Laravel Logo" class="skill-logo"
+                                                    style="width: 24px; height: 24px;"> Laravel,
+                                                <img src="img/icon/spring_boot.png" alt="Spring Boot Logo"
+                                                    class="skill-logo" style="width: 24px; height: 24px;"> Spring
+                                                Boot
+                                            </p>
                                         </div>
                                     </div>
-                                    <!-- Spring Boot -->
+                                    <!-- Languages -->
                                     <div class="col-md-6 mb-4">
                                         <div class="skill-card">
-                                            <img src="img/icon/spring_boot.png" alt="Spring Boot Logo"
-                                                class="skill-logo mb-3" style="width: 60px; height: 60px;">
-                                            <h5>Spring Boot</h5>
+                                            <h6><i class="fas fa-code"></i> Languages</h6>
+                                            <p style="font-size: 0.75rem; line-height: 1.5;">
+                                                <img src="img/icon/dart.png" alt="Dart Icon" class="skill-logo"
+                                                    style="width: 24px; height: 24px;"> Dart,
+                                                <img src="img/icon/java.png" alt="Java Icon" class="skill-logo"
+                                                    style="width: 24px; height: 24px;"> Java,
+                                                <img src="img/icon/kotlin.png" alt="Kotlin Icon" class="skill-logo"
+                                                    style="width: 24px; height: 24px;"> Kotlin
+                                                <img src="img/icon/php.png" alt="PHP Icon" class="skill-logo"
+                                                    style="width: 24px; height: 24px;"> PHP,
+                                                <img src="img/icon/html.png" alt="HTML5 Icon" class="skill-logo"
+                                                    style="width: 24px; height: 24px;"> HTML5,
+                                                <img src="img/icon/css.png" alt="CSS3 Icon" class="skill-logo"
+                                                    style="width: 24px; height: 24px;"> CSS3,
+                                                <img src="img/icon/bootstrap.png" alt="Bootstrap Icon"
+                                                    class="skill-logo" style="width: 24px; height: 24px;">
+                                                Bootstrap,
+                                                <img src="img/icon/javascript.png" alt="JavaScript Icon"
+                                                    class="skill-logo" style="width: 24px; height: 24px;">
+                                                JavaScript,
+                                                <img src="img/icon/jquery.png" alt="jQuery Icon" class="skill-logo"
+                                                    style="width: 24px; height: 24px;"> jQuery,
+                                                <img src="img/icon/vue_js.png" alt="Vue.js Icon" class="skill-logo"
+                                                    style="width: 24px; height: 24px;"> Vue.js
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <!-- Second Row: Databases & IDEs -->
+                                <div class="row text-center">
+                                    <!-- Databases -->
+                                    <div class="col-md-6 mb-4">
+                                        <div class="skill-card">
+                                            <h6><i class="fas fa-database"></i> Databases</h6>
+                                            <p style="font-size: 0.75rem; line-height: 1.5;">
+                                                <img src="img/icon/mysql.png" alt="MySQL Icon" class="skill-logo"
+                                                    style="width: 24px; height: 24px;">
+                                                MySQL,
+                                                <img src="img/icon/sqlite.png" alt="SQLite Icon" class="skill-logo"
+                                                    style="width: 24px; height: 24px;"> SQLite,
+                                                <img src="img/icon/sql_server.png" alt="SQL Server Icon"
+                                                    class="skill-logo" style="width: 24px; height: 24px;"> SQL
+                                                Server
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    
+                                    <!-- IDEs -->
+                                    <div class="col-md-6 mb-4">
+                                        <div class="skill-card">
+                                            <h6><i class="fas fa-laptop-code"></i> IDEs</h6>
+                                            <p style="font-size: 0.75rem; line-height: 1.5;">
+                                                <img src="img/icon/android_studio.png" alt="Android Studio Icon"
+                                                    class="skill-logo" style="width: 24px; height: 24px;">
+                                                Android Studio,
+                                                <img src="img/icon/intellij.png" alt="IntelliJ Icon" class="skill-logo"
+                                                    style="width: 24px; height: 24px;">
+                                                IntelliJ IDEA,
+                                                <img src="img/icon/vsc.png" alt="Visual Studio Code Icon"
+                                                    class="skill-logo" style="width: 24px; height: 24px;"> Visual
+                                                Studio
+                                                Code,
+                                                <img src="img/icon/php_s.png" alt="PHPStorm Icon" class="skill-logo"
+                                                    style="width: 24px; height: 24px;"> PHPStorm
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
 
-                                <!-- Toggle Button -->
-                                <div class="text-center mb-4">
-                                    <button id="toggleButtonWik" class="btn btn-outline-primary">Show More</button>
-                                </div>
-                                <div id="additionalContentWik">
-                                    <!-- Second Row: Detailed Skills -->
-                                    <div class="row text-center">
-                                        <!-- Languages -->
-                                        <div class="col-md-6 mb-4">
-                                            <div class="skill-card">
-                                                <h6><i class="fas fa-code"></i> Languages</h6>
-                                                <p style="font-size: 0.75rem; line-height: 1.5;">
-                                                    <img src="img/icon/php.png" alt="PHP Icon" class="skill-logo"
-                                                        style="width: 24px; height: 24px;"> PHP,
-                                                    <img src="img/icon/html.png" alt="HTML5 Icon" class="skill-logo"
-                                                        style="width: 24px; height: 24px;"> HTML5,
-                                                    <img src="img/icon/css.png" alt="CSS3 Icon" class="skill-logo"
-                                                        style="width: 24px; height: 24px;"> CSS3,
-                                                    <img src="img/icon/bootstrap.png" alt="Bootstrap Icon"
-                                                        class="skill-logo" style="width: 24px; height: 24px;">
-                                                    Bootstrap,
-                                                    <img src="img/icon/javascript.png" alt="JavaScript Icon"
-                                                        class="skill-logo" style="width: 24px; height: 24px;">
-                                                    JavaScript,
-                                                    <img src="img/icon/jquery.png" alt="jQuery Icon" class="skill-logo"
-                                                        style="width: 24px; height: 24px;"> jQuery,
-                                                    <img src="img/icon/vue_js.png" alt="Vue.js Icon" class="skill-logo"
-                                                        style="width: 24px; height: 24px;"> Vue.js
-                                                </p>
-                                            </div>
-                                        </div>
-
-                                        <!-- IDEs -->
-                                        <div class="col-md-6 mb-4">
-                                            <div class="skill-card">
-                                                <h6><i class="fas fa-laptop-code"></i> IDEs</h6>
-                                                <p style="font-size: 0.75rem; line-height: 1.5;">
-                                                    <img src="img/icon/vsc.png" alt="Visual Studio Code Icon"
-                                                        class="skill-logo" style="width: 24px; height: 24px;"> Visual
-                                                    Studio
-                                                    Code,
-                                                    <img src="img/icon/php_s.png" alt="PHPStorm Icon" class="skill-logo"
-                                                        style="width: 24px; height: 24px;"> PHPStorm
-                                                </p>
-                                            </div>
+                                <!-- Third Row: Other Technologie & Other Tools -->
+                                <div class="row text-center">
+                                    <!-- Other Technologie -->
+                                    <div class="col-md-6 mb-4">
+                                        <div class="skill-card">
+                                            <h5><i class="fas fa-cloud"></i> Other Technologies</h5>
+                                            <p style="font-size: 0.75rem; line-height: 1.5;">
+                                                <img src="img/icon/git.png" alt="Git Icon" class="skill-logo"
+                                                    style="width: 24px; height: 24px;">
+                                                Git,
+                                                <img src="img/icon/github.png" alt="GitHub Icon" class="skill-logo"
+                                                    style="width: 24px; height: 24px;">
+                                                GitHub,
+                                                <img src="img/icon/firebase.png" alt="Firebase Icon" class="skill-logo"
+                                                    style="width: 24px; height: 24px;">
+                                                Firebase
+                                            </p>
                                         </div>
                                     </div>
 
-                                    <!-- Third Row: Databases & Other Tools -->
-                                    <div class="row text-center">
-                                        <!-- Databases -->
-                                        <div class="col-md-6 mb-4">
-                                            <div class="skill-card">
-                                                <h6><i class="fas fa-database"></i> Databases</h6>
-                                                <p style="font-size: 0.75rem; line-height: 1.5;">
-                                                    <img src="img/icon/sql_server.png" alt="SQL Server Icon"
-                                                        class="skill-logo" style="width: 24px; height: 24px;"> SQL
-                                                    Server
-                                                </p>
-                                            </div>
-                                        </div>
-
-                                        <!-- Other Tools -->
-                                        <div class="col-md-6 mb-4">
-                                            <div class="skill-card">
-                                                <h6><i class="fas fa-tools"></i> Other Tools</h6>
-                                                <p style="font-size: 0.75rem; line-height: 1.5;">
-                                                    <img src="img/icon/photoshop.png" alt="Adobe Photoshop Icon"
-                                                        class="skill-logo" style="width: 24px; height: 24px;"> Adobe
-                                                    Photoshop
-                                                </p>
-                                            </div>
+                                    <!-- Other Tools -->
+                                    <div class="col-md-6 mb-4">
+                                        <div class="skill-card">
+                                            <h6><i class="fas fa-tools"></i> Other Tools</h6>
+                                            <p style="font-size: 0.75rem; line-height: 1.5;">
+                                                <img src="img/icon/photoshop.png" alt="Adobe Photoshop Icon"
+                                                    class="skill-logo" style="width: 24px; height: 24px;"> Adobe
+                                                Photoshop
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
+
                             </div>
                         </div>
                     </div>
@@ -567,63 +546,35 @@
             <div class="row pb-3">
                 <div class="col-lg-4 col-md-6 text-center mb-5">
                     <div class="d-flex align-items-center justify-content-center mb-4">
-                        <i class="fa fa-2x fa-laptop service-icon bg-primary text-white mr-3"></i>
-                        <h4 class="font-weight-bold m-0">Web Design</h4>
-                    </div>
-                    <p>Justo sit justo eos amet tempor amet clita amet ipsum eos elitr. Amet lorem lorem lorem est
-                        amet
-                        labore eirmod erat clita</p>
-                    <a class="border-bottom border-primary text-decoration-none" href="">Read More</a>
-                </div>
-                <div class="col-lg-4 col-md-6 text-center mb-5">
-                    <div class="d-flex align-items-center justify-content-center mb-4">
-                        <i class="fa fa-2x fa-laptop-code service-icon bg-primary text-white mr-3"></i>
-                        <h4 class="font-weight-bold m-0">Web Development</h4>
-                    </div>
-                    <p>Justo sit justo eos amet tempor amet clita amet ipsum eos elitr. Amet lorem lorem lorem est
-                        amet
-                        labore eirmod erat clita</p>
-                    <a class="border-bottom border-primary text-decoration-none" href="">Read More</a>
-                </div>
-                <div class="col-lg-4 col-md-6 text-center mb-5">
-                    <div class="d-flex align-items-center justify-content-center mb-4">
                         <i class="fab fa-2x fa-android service-icon bg-primary text-white mr-3"></i>
                         <h4 class="font-weight-bold m-0">Apps Design</h4>
                     </div>
-                    <p>Justo sit justo eos amet tempor amet clita amet ipsum eos elitr. Amet lorem lorem lorem est
-                        amet
-                        labore eirmod erat clita</p>
-                    <a class="border-bottom border-primary text-decoration-none" href="">Read More</a>
+                    <p>Crafting intuitive and visually appealing mobile app designs focused on delivering a seamless user experience across iOS and Android platforms</p>
+                    
                 </div>
                 <div class="col-lg-4 col-md-6 text-center mb-5">
                     <div class="d-flex align-items-center justify-content-center mb-4">
                         <i class="fab fa-2x fa-apple service-icon bg-primary text-white mr-3"></i>
                         <h4 class="font-weight-bold m-0">Apps Development</h4>
                     </div>
-                    <p>Justo sit justo eos amet tempor amet clita amet ipsum eos elitr. Amet lorem lorem lorem est
-                        amet
-                        labore eirmod erat clita</p>
-                    <a class="border-bottom border-primary text-decoration-none" href="">Read More</a>
+                    <p>Building high-performance, feature-rich mobile applications using modern technologies like Flutter to provide a smooth and responsive experience on both Android and iOS devices</p>
                 </div>
                 <div class="col-lg-4 col-md-6 text-center mb-5">
                     <div class="d-flex align-items-center justify-content-center mb-4">
-                        <i class="fa fa-2x fa-search service-icon bg-primary text-white mr-3"></i>
-                        <h4 class="font-weight-bold m-0">SEO</h4>
+                        <i class="fa fa-2x fa-laptop service-icon bg-primary text-white mr-3"></i>
+                        <h4 class="font-weight-bold m-0">Web Design</h4>
                     </div>
-                    <p>Justo sit justo eos amet tempor amet clita amet ipsum eos elitr. Amet lorem lorem lorem est
-                        amet
-                        labore eirmod erat clita</p>
-                    <a class="border-bottom border-primary text-decoration-none" href="">Read More</a>
+                    <p>Designing clean, responsive, and user-friendly websites that adapt to all screen sizes, ensuring an engaging online presence for your business or brand</p>
                 </div>
+                
+            </div>
+            <div class="row justify-content-center">
                 <div class="col-lg-4 col-md-6 text-center mb-5">
                     <div class="d-flex align-items-center justify-content-center mb-4">
-                        <i class="fa fa-2x fa-edit service-icon bg-primary text-white mr-3"></i>
-                        <h4 class="font-weight-bold m-0">Content Creating</h4>
+                        <i class="fa fa-2x fa-laptop-code service-icon bg-primary text-white mr-3"></i>
+                        <h4 class="font-weight-bold m-0">Web Development</h4>
                     </div>
-                    <p>Justo sit justo eos amet tempor amet clita amet ipsum eos elitr. Amet lorem lorem lorem est
-                        amet
-                        labore eirmod erat clita</p>
-                    <a class="border-bottom border-primary text-decoration-none" href="">Read More</a>
+                    <p>Developing dynamic, scalable websites and web applications with the latest web technologies, optimized for speed, security, and seamless user interaction</p>
                 </div>
             </div>
         </div>
@@ -917,32 +868,6 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
-    <script>
-        document.getElementById('toggleButtonWiga').addEventListener('click', function () {
-            var content = document.getElementById('additionalContentWiga');
-            var button = document.getElementById('toggleButtonWiga');
-
-            if (content.classList.contains('show')) {
-                content.classList.remove('show');
-                button.textContent = 'Show More';
-            } else {
-                content.classList.add('show');
-                button.textContent = 'Show Less';
-            }
-        });
-        document.getElementById('toggleButtonWik').addEventListener('click', function () {
-            var content = document.getElementById('additionalContentWik');
-            var button = document.getElementById('toggleButtonWik');
-
-            if (content.classList.contains('show')) {
-                content.classList.remove('show');
-                button.textContent = 'Show More';
-            } else {
-                content.classList.add('show');
-                button.textContent = 'Show Less';
-            }
-        });
-    </script>
 </body>
 
 </html>
