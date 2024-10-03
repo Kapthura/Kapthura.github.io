@@ -29,59 +29,90 @@
         .skill-section {
             padding: 40px 0;
         }
-    
+
         .skill-card {
             background-color: #fff;
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease-in-out;
-            min-height: 250px; /* Ensures equal height */
+            min-height: 250px;
+            /* Ensures equal height */
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
         }
-    
+
         .skill-card:hover {
             transform: translateY(-10px);
         }
-    
+
         .skill-logo {
             width: 50px;
             height: 50px;
         }
-    
+
         .section-title {
             text-align: center;
             font-weight: bold;
             font-size: 2rem;
             margin-bottom: 40px;
         }
-    
+
         /* Adjustments for readability */
         .skill-card h6 {
             font-size: 1.2rem;
             margin-bottom: 10px;
         }
-    
+
         .skill-card p {
             font-size: 0.9rem;
             line-height: 1.6;
         }
-    
+
         /* Ensures that content inside the cards does not overflow */
         .skill-card p img {
             margin-right: 8px;
         }
-    
+
         @media (min-width: 768px) {
             .skill-card {
-                min-height: 200px; /* Larger min height for bigger screens */
+                min-height: 200px;
+                /* Larger min height for bigger screens */
             }
         }
+
+        .protfolio-hover-effect {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .protfolio-hover-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 2rem;
+            color: white;
+            background-color: #0bceaf;
+            padding: 10px;
+            border-radius: 50%;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+
+        .protfolio-image-container:hover .protfolio-hover-icon {
+            opacity: 1;
+        }
+
+
+        .protfolio-icon-link {
+            text-decoration: none;
+            color: white;
+        }
     </style>
-    
+
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="51">
@@ -469,7 +500,7 @@
                                         </div>
                                     </div>
 
-                                    
+
                                     <!-- IDEs -->
                                     <div class="col-md-6 mb-4">
                                         <div class="skill-card">
@@ -549,24 +580,27 @@
                         <i class="fab fa-2x fa-android service-icon bg-primary text-white mr-3"></i>
                         <h4 class="font-weight-bold m-0">Apps Design</h4>
                     </div>
-                    <p>Crafting intuitive and visually appealing mobile app designs focused on delivering a seamless user experience across iOS and Android platforms</p>
-                    
+                    <p>Crafting intuitive and visually appealing mobile app designs focused on delivering a seamless
+                        user experience across iOS and Android platforms</p>
+
                 </div>
                 <div class="col-lg-4 col-md-6 text-center mb-5">
                     <div class="d-flex align-items-center justify-content-center mb-4">
                         <i class="fab fa-2x fa-apple service-icon bg-primary text-white mr-3"></i>
                         <h4 class="font-weight-bold m-0">Apps Development</h4>
                     </div>
-                    <p>Building high-performance, feature-rich mobile applications using modern technologies like Flutter to provide a smooth and responsive experience on both Android and iOS devices</p>
+                    <p>Building high-performance, feature-rich mobile applications using modern technologies like
+                        Flutter to provide a smooth and responsive experience on both Android and iOS devices</p>
                 </div>
                 <div class="col-lg-4 col-md-6 text-center mb-5">
                     <div class="d-flex align-items-center justify-content-center mb-4">
                         <i class="fa fa-2x fa-laptop service-icon bg-primary text-white mr-3"></i>
                         <h4 class="font-weight-bold m-0">Web Design</h4>
                     </div>
-                    <p>Designing clean, responsive, and user-friendly websites that adapt to all screen sizes, ensuring an engaging online presence for your business or brand</p>
+                    <p>Designing clean, responsive, and user-friendly websites that adapt to all screen sizes, ensuring
+                        an engaging online presence for your business or brand</p>
                 </div>
-                
+
             </div>
             <div class="row justify-content-center">
                 <div class="col-lg-4 col-md-6 text-center mb-5">
@@ -574,7 +608,8 @@
                         <i class="fa fa-2x fa-laptop-code service-icon bg-primary text-white mr-3"></i>
                         <h4 class="font-weight-bold m-0">Web Development</h4>
                     </div>
-                    <p>Developing dynamic, scalable websites and web applications with the latest web technologies, optimized for speed, security, and seamless user interaction</p>
+                    <p>Developing dynamic, scalable websites and web applications with the latest web technologies,
+                        optimized for speed, security, and seamless user interaction</p>
                 </div>
             </div>
         </div>
@@ -600,38 +635,44 @@
                 </div>
             </div>
             <div class="row portfolio-container">
+
                 <div class="col-lg-4 col-md-6 mb-4 portfolio-item first">
-                    <div class="position-relative overflow-hidden mb-2">
-                        <img class="img-fluid rounded w-100" src="img/portfolio-1.jpg" alt="">
-                        <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
-                            <a href="img/portfolio-1.jpg" data-lightbox="portfolio">
-                                <i class="fa fa-plus text-white" style="font-size: 60px;"></i>
-                            </a>
-                        </div>
+                    <div class="position-relative overflow-hidden mb-2 protfolio-image-container">
+                        <img class="img-fluid rounded w-100 " src="img/fms.png" alt="">
+                        <a href="https://example.com" target="_blank" class="icon-link">
+                            <i class="fas fa-link protfolio-hover-icon"></i>
+                        </a>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 mb-4 portfolio-item second">
-                    <div class="position-relative overflow-hidden mb-2">
-                        <img class="img-fluid rounded w-100" src="img/portfolio-2.jpg" alt="">
-                        <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
+
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item first">
+                    <div class="position-relative overflow-hidden mb-2 protfolio-image-container">
+                        <img class="img-fluid rounded w-100" src="img/ration.png" alt="">
+                        <a href="https://example.com" target="_blank" class="icon-link"></a>
+                            <i class="fas fa-link protfolio-hover-icon"></i>
+                        </a>
+                        <!-- <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
                             <a href="img/portfolio-2.jpg" data-lightbox="portfolio">
                                 <i class="fa fa-plus text-white" style="font-size: 60px;"></i>
                             </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4 portfolio-item third">
-                    <div class="position-relative overflow-hidden mb-2">
-                        <img class="img-fluid rounded w-100" src="img/portfolio-3.jpg" alt="">
-                        <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
-                            <a href="img/portfolio-3.jpg" data-lightbox="portfolio">
-                                <i class="fa fa-plus text-white" style="font-size: 60px;"></i>
-                            </a>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 mb-4 portfolio-item first">
-                    <div class="position-relative overflow-hidden mb-2">
+                    <div class="position-relative overflow-hidden mb-2 protfolio-image-container">
+                        <img class="img-fluid rounded w-100" src="img/ds.png" alt="">
+                        <a href="https://example.com" target="_blank" class="icon-link"></a>
+                            <i class="fas fa-link protfolio-hover-icon"></i>
+                        </a>
+                        <!-- <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
+                            <a href="img/portfolio-3.jpg" data-lightbox="portfolio">
+                                <i class="fa fa-plus text-white" style="font-size: 60px;"></i>
+                            </a>
+                        </div> -->
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item second">
+                    <div class="position-relative overflow-hidden mb-2 ">
                         <img class="img-fluid rounded w-100" src="img/portfolio-4.jpg" alt="">
                         <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
                             <a href="img/portfolio-4.jpg" data-lightbox="portfolio">
@@ -640,14 +681,17 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 mb-4 portfolio-item second">
-                    <div class="position-relative overflow-hidden mb-2">
-                        <img class="img-fluid rounded w-100" src="img/portfolio-5.jpg" alt="">
-                        <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item first">
+                    <div class="position-relative overflow-hidden mb-2 protfolio-image-container">
+                        <img class="img-fluid rounded w-100" src="img/med.png" alt="">
+                        <a href="#" target="_blank" class="icon-link"></a>
+                            <i class="fas fa-link protfolio-hover-icon"></i>
+                        </a>
+                        <!-- <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
                             <a href="img/portfolio-5.jpg" data-lightbox="portfolio">
                                 <i class="fa fa-plus text-white" style="font-size: 60px;"></i>
                             </a>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 mb-4 portfolio-item third">
@@ -669,7 +713,7 @@
 
 
     <!-- Blog Start -->
-     <!--
+    <!--
     <div class="container-fluid pt-5" id="blog">
         <div class="container">
             <div class="position-relative d-flex align-items-center justify-content-center">
@@ -736,9 +780,10 @@
                     <div class="contact-form text-center">
                         <div id="success"></div>
                         <form name="sentMessage" id="contactForm" novalidate="novalidate">
-                          
+
                             <div class="row justify-content-center">
-                                <a href="mailto:kapthuara.jayasanka@gmail.com?subject=Contact%20Us" class="btn btn-outline-primary">Send Message</a>
+                                <a href="mailto:kapthuara.jayasanka@gmail.com?subject=Contact%20Us"
+                                    class="btn btn-outline-primary">Send Message</a>
                             </div>
                         </form>
                     </div>
@@ -753,7 +798,10 @@
     <div class="container-fluid bg-primary text-white mt-5 py-5 px-sm-3 px-md-5">
         <div class="container text-center py-5">
             <div class="d-flex justify-content-center mb-4">
-                <a class="btn btn-light btn-social mr-2" href="https://www.linkedin.com/in/kapthura-jayasanka-b944446b/"><i class="fab fa-linkedin-in"></i></a>
+                <a class="btn btn-light btn-social mr-2" href="https://www.linkedin.com/in/kapthura-jayasanka-b944446b/"
+                    target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
             </div>
             <div class="d-flex justify-content-center mb-3">
                 <a class="text-white" href="#">Privacy</a>
