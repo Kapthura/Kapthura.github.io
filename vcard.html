@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Card</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f4f4f4;
+        }
+        .profile-card {
+            background-color: #ffffff;
+            border-radius: 20px;
+            padding: 20px;
+            max-width: 350px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            margin: auto;
+            margin-top: 20px;
+        }
+        .profile-card .profile-header {
+            background-color: #0bceaf;
+            border-radius: 15px;
+            padding: 30px 20px;
+            text-align: center;
+            color: #fff;
+        }
+        .profile-card .profile-img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 5px solid white;
+            margin-bottom: 10px;
+        }
+        .profile-card .btn-group {
+            margin-top: 20px;
+        }
+        .profile-card .btn {
+            border-radius: 30px;
+            width: 50px;
+            margin: 5px;
+            color: white;
+            background-color: #0bceaf;
+        }
+        .contact-info {
+            padding: 20px;
+        }
+        .contact-info .row {
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .contact-info .icon-container {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background-color: #e0f7f4; /* Light background to match theme */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 10px;
+        }
+        .contact-info .icon {
+            font-size: 20px;
+            color: #0bceaf; /* Theme color */
+            display: inline-block;
+        }
+        .contact-info a {
+            color: #0bceaf;
+            font-size: 16px;
+            text-decoration: none;
+        }
+        .save-btn {
+            background-color: #0bceaf;
+            color: white;
+            border-radius: 30px;
+            width: 100%;
+            padding: 10px;
+            text-align: center;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .find-me-on {
+            text-align: center;
+            padding: 20px;
+        }
+        .find-me-on a {
+            color: #0bceaf;
+            font-size: 18px;
+            margin-left: 10px;
+            text-decoration: none;
+        }
+    </style>
+    
+</head>
+<body>
+
+    <div class="profile-card">
+        <div class="profile-header">
+            <img src="img/pro.png" alt="Profile Image" class="profile-img">
+            <h3>Kapthura Jayasanka</h3>
+            <p>Software Engineer</p>
+            <p style="font-size: xx-small;">" The best way to predict your future is to create it "</p>
+
+            <div class="btn-group">
+                <a href="tel:+94773094666" class="btn btn-light"><i class="fas fa-phone"></i></a>
+                <a href="mailto:kapthura.jayasanka@gmail.com" class="btn btn-light"><i class="fas fa-envelope"></i></a>
+                <a href="https://kapthura.github.io/" target="_blank" class="btn btn-light"><i class="fas fa-globe"></i></a>
+                <a href="https://wa.me/94773094666" target="_blank" class="btn btn-light"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+
+        <div class="contact-info">
+            <div class="row">
+                <div class="col-2 text-center">
+                    <div class="icon-container">
+                        <i class="fas fa-phone icon"></i>
+                    </div>
+                </div>
+                <div class="col-10">
+                    <strong>Phone</strong><br>+94773094666
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-2 text-center">
+                    <div class="icon-container">
+                        <i class="fab fa-whatsapp icon"></i>
+                    </div>
+                </div>
+                <div class="col-10">
+                    <strong>WhatsApp</strong><br>+94773094666
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-2 text-center">
+                    <div class="icon-container">
+                        <i class="fas fa-envelope icon"></i>
+                    </div>
+                </div>
+                <div class="col-10">
+                    <strong>Email</strong><br>kapthura.jayasanka@gmail.com
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-2 text-center">
+                    <div class="icon-container">
+                        <i class="fas fa-globe icon"></i>
+                    </div>
+                </div>
+                <div class="col-10">
+                    <strong>Website</strong><br><a href="https://kapthura.github.io/" target="_blank">https://kapthura.github.io/</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="save-btn" onclick="downloadVCard()">
+            <i class="fas fa-address-book"></i> Save to contacts
+        </div>
+
+        <div class="find-me-on">
+            <p>Find me on</p>
+            <a href="https://linkedin.com/in/kapthura" target="_blank">
+                <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        function downloadVCard() {
+            const vCardData = `BEGIN:VCARD
+VERSION:3.0
+FN:Kapthura Jayasanka
+TITLE:Software Engineer
+TEL:+94773094666
+EMAIL:kapthura.jayasanka@gmail.com
+URL:https://kapthura.github.io/
+PHOTO;VALUE=URL:https://kapthura.github.io/img/pro.jpg
+END:VCARD`;
+
+            const blob = new Blob([vCardData], { type: 'text/vcard' });
+            const link = document.createElement('a');
+            link.href = window.URL.createObjectURL(blob);
+            link.download = 'Kapthura_Jayasanka.vcf';
+            link.click();
+        }
+    </script>
+</body>
+</html>
