@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DBurn Webs Projects</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <!-- Customized Bootstrap Stylesheet -->
+    <style>
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+        }
+
+        .card {
+            border: none;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-header {
+            background-color: #0bceaf;
+            color: white;
+            font-size: 1.25rem;
+            font-weight: bold;
+            border-bottom: 0;
+            border-radius: 0.5rem 0.5rem 0 0;
+        }
+
+        .card-body {
+            background-color: white;
+        }
+
+        .card-text,
+        ul li {
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .project-card {
+            margin-bottom: 30px;
+        }
+
+        h1,
+        h4 {
+            color: #0bceaf;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        .lead {
+            font-size: 1.125rem;
+        }
+
+        .navbar-light .navbar-nav .nav-link {
+            padding: 25px 10px;
+            color: #343a40;
+            font-weight: 500;
+            outline: none;
+        }
+
+        .title-responsive {
+            font-size: 8vw;
+            /* Makes the text size responsive based on the viewport width */
+            text-align: center;
+            margin-top: 100px
+        }
+
+        @media (max-width: 768px) {
+            .title-responsive {
+                font-size: 8vw;
+                /* Slightly smaller font size for tablets and small screens */
+            }
+        }
+
+        @media (max-width: 576px) {
+            .title-responsive {
+                font-size: 6vw;
+                /* Even smaller for mobile screens */
+
+            }
+        }
+
+        .subtitle-responsive {
+            font-size: 4vw;
+            /* Makes the text size responsive based on the viewport width */
+            text-align: center;
+            margin-top: 100px
+        }
+
+        @media (max-width: 768px) {
+            .subtitle-responsive {
+                font-size: 3vw;
+                /* Slightly smaller font size for tablets and small screens */
+            }
+        }
+
+        @media (max-width: 576px) {
+            .subtitle-responsive {
+                font-size: 2vw;
+                /* Even smaller for mobile screens */
+
+            }
+        }
+
+        .text-white {
+            color: #fff !important;
+        }
+
+        .text-uppercase {
+            text-transform: uppercase !important;
+        }
+
+        h1,
+        .font-weight-bolder {
+            font-weight: 900 !important;
+        }
+
+        .title-color {
+            color: #1b2624
+        }
+
+        .bg-primary {
+            background-color: #0BCEAF !important;
+        }
+
+
+        .btn-social {
+            width: 45px;
+            height: 45px;
+            padding-left: 0;
+            padding-right: 0;
+            text-align: center;
+            border-radius: 45px;
+        }
+
+        .btn {
+            padding: 10px 15px;
+            border-radius: 100px;
+        }
+
+        .mr-2,
+        .mx-2 {
+            margin-right: 0.5rem !important;
+        }
+
+        .btn-light {
+            color: #212529;
+            background-color: #ffffff;
+            border-color: #ffffff;
+        }
+
+        .emphasized {
+            font-weight: bold;
+            font-size: 1.2rem;
+            /* Increase the font size */
+            color: #007bff;
+            /* Change the color to a standout color */
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <!-- Navbar Start -->
+    <nav class="navbar fixed-top shadow-sm navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-lg-5">
+        <!-- <a href="index.html" class="navbar-brand ml-lg-3">
+            <h1 class="m-0 display-5"><span class="text-primary">Code</span>Journey</h1>
+        </a> -->
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse px-lg-3" id="navbarCollapse">
+            <div class="navbar-nav m-auto py-0">
+                <a href="index.html#home" class="nav-item nav-link active">Home</a>
+                <a href="#about" class="nav-item nav-link">About</a>
+                <a href="index.html#qualification" class="nav-item nav-link">Quality</a>
+                <a href="#skill" class="nav-item nav-link">Skill</a>
+                <a href="#service" class="nav-item nav-link">Service</a>
+                <a href="#portfolio" class="nav-item nav-link">Portfolio</a>
+                <a href="#testimonial" class="nav-item nav-link">Review</a>
+                <a href="#blog" class="nav-item nav-link">Blog</a>
+                <a href="#contact" class="nav-item nav-link">Contact</a>
+            </div>
+            <a href="" class="btn btn-outline-primary d-none d-lg-block">Hire Me</a>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Qualification Start -->
+    <div class="container-fluid py-5" id="qualification">
+        <div class="container">
+            <div class="position-relative d-flex align-items-center justify-content-center">
+                <h1 class="title-responsive text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">
+                    Professional</h1>
+                <h1 class="subtitle-responsive position-absolute text-uppercase">Work Expericence</h1>
+            </div>
+
+        </div>
+    </div>
+    <!-- Qualification End -->
+
+
+    <div class="container mt-5">
+        <div class="position-relative mb-4">
+            <h1 class="font-weight-bold mb-1 title-color">Software Engineer</h1>
+            <p class="mb-2"><strong>DBURN Webs</strong> | <small>May 2017 – July 2019</small></p>
+        </div>
+        <p class="lead mb-4">Responsibilities: As a Software Engineer at DBURN Webs, I was involved in the development
+            of the following <b class="emphasized"> Android applications</b>.</p>
+
+        <div class="row">
+            <!-- Personal Library Management app -->
+            <div class="col-md-12 project-card">
+                <div class="card">
+                    <div class="card-header">
+                        Personal Library Management App
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">This app is developed to manage a small library. Books are entered into the
+                            application based on the ISBN number. The application will give the shelf number where the
+                            queried book is stored.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fertilizer – The Plant Nursery Management App -->
+            <div class="col-md-12 project-card">
+                <div class="card">
+                    <div class="card-header">
+                        Fertilizer – The Plant Nursery Management App
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">This app is developed for the Orchard Cut Flower industry where timely
+                            fertilizing is pivotal for the success of the business. This app also has features that
+                            allow the nursery owner to track the cut flower production.</p>
+                    </div>
+                </div>
+            </div>
+
+            <p class="lead mb-4" style="padding-left: 15px;">I was also involved in the design and development of the following <b class="emphasized">web applications
+                    and websites </b>.</p>
+
+            <!-- Travel Agent System -->
+            <div class="col-md-12 project-card">
+                <div class="card">
+                    <div class="card-header">
+                        Travel Agent System
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">This web app is designed for a travel service provider who has their agent
+                            offices worldwide. The system can generate a complete travel plan including
+                            arrival/departure times, hotel details, road maps, taxi information, and the total cost of
+                            the travel.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- IK Auto Care -->
+            <div class="col-md-12 project-card">
+                <div class="card">
+                    <div class="card-header">
+                        IK Auto Care (<a href="http://ikautocare.com" style="font-size: 0.8rem;">ikautocare.com</a>)
+                    </div>
+                </div>
+            </div>
+
+            <!-- Oranta Holidays -->
+            <div class="col-md-12 project-card">
+                <div class="card">
+                    <div class="card-header">
+                        Oranta Holidays (<a href="http://orantaholidays.lk" style="font-size: 0.8rem;">orantaholidays.lk</a>)
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-4">
+            <h4>Technologies and Tools:</h4>
+            <p>Laravel, PHP, HTML5, CSS3, Bootstrap, JQuery, MySQL, Android, Android Studio, SQLite Browser, Adobe
+                Photoshop CS5</p>
+        </div>
+    </div>
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-primary text-white mt-5 py-5 px-sm-3 px-md-5">
+        <div class="container text-center py-5">
+            <div class="d-flex justify-content-center mb-4">
+                <a class="btn btn-light btn-social mr-2" href="https://www.linkedin.com/in/kapthura-jayasanka-b944446b/"
+                    target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a class="btn btn-light btn-social mr-2" href="https://github.com/Kapthura"
+                    target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+            <div class="d-flex justify-content-center mb-3">
+                <a class="text-white" href="#">Privacy</a>
+                <span class="px-3">|</span>
+                <a class="text-white" href="#">Terms</a>
+                <span class="px-3">|</span>
+                <a class="text-white" href="#">FAQs</a>
+                <span class="px-3">|</span>
+                <a class="text-white" href="#">Help</a>
+            </div>
+            <p class="m-0">&copy; <a class="text-white font-weight-bold" href="#">Kapthura.github.io</a>. All Rights
+                Reserved.
+                Designed by <a class="text-white font-weight-bold" href="#">Kapthura</a>
+            </p>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
