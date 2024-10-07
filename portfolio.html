@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolios</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <!-- Customized Bootstrap Stylesheet -->
+    <style>
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+        }
+
+        .card {
+            border: none;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-header {
+            background-color: #0bceaf;
+            color: white;
+            font-size: 1.25rem;
+            font-weight: bold;
+            border-bottom: 0;
+            border-radius: 0.5rem 0.5rem 0 0;
+        }
+
+        .card-body {
+            background-color: white;
+        }
+
+        .card-text,
+        ul li {
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .project-card {
+            margin-bottom: 30px;
+        }
+
+        h1,
+        h4 {
+            color: #0bceaf;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        .lead {
+            font-size: 1.125rem;
+        }
+
+        .navbar-light .navbar-nav .nav-link {
+            padding: 25px 10px;
+            color: #343a40;
+            font-weight: 500;
+            outline: none;
+        }
+
+        .title-responsive {
+            font-size: 8vw;
+            /* Makes the text size responsive based on the viewport width */
+            text-align: center;
+            margin-top: 100px
+        }
+
+        @media (max-width: 768px) {
+            .title-responsive {
+                font-size: 8vw;
+                /* Slightly smaller font size for tablets and small screens */
+            }
+        }
+
+        @media (max-width: 576px) {
+            .title-responsive {
+                font-size: 6vw;
+                /* Even smaller for mobile screens */
+
+            }
+        }
+
+        .subtitle-responsive {
+            font-size: 4vw;
+            /* Makes the text size responsive based on the viewport width */
+            text-align: center;
+            margin-top: 100px
+        }
+
+        @media (max-width: 768px) {
+            .subtitle-responsive {
+                font-size: 3vw;
+                /* Slightly smaller font size for tablets and small screens */
+            }
+        }
+
+        @media (max-width: 576px) {
+            .subtitle-responsive {
+                font-size: 2vw;
+                /* Even smaller for mobile screens */
+
+            }
+        }
+
+        .text-white {
+            color: #fff !important;
+        }
+
+        .text-uppercase {
+            text-transform: uppercase !important;
+        }
+
+        h1,
+        .font-weight-bolder {
+            font-weight: 900 !important;
+        }
+
+        .title-color {
+            color: #1b2624
+        }
+
+        .bg-primary {
+            background-color: #0BCEAF !important;
+        }
+
+
+        .btn-social {
+            width: 45px;
+            height: 45px;
+            padding-left: 0;
+            padding-right: 0;
+            text-align: center;
+            border-radius: 45px;
+        }
+
+        .btn {
+            padding: 10px 15px;
+            border-radius: 100px;
+        }
+
+        .mr-2,
+        .mx-2 {
+            margin-right: 0.5rem !important;
+        }
+
+        .btn-light {
+            color: #212529;
+            background-color: #ffffff;
+            border-color: #ffffff;
+        }
+
+        .emphasized {
+            font-weight: bold;
+            font-size: 1.2rem;
+            /* Increase the font size */
+            color: #0bceaf;
+            /* Change the color to a standout color */
+        }
+
+        /*gallery*/
+
+
+        /* Center the filter buttons */
+        .filter-buttons {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* Style the buttons with rounded corners, border outline, and color */
+        .filter-buttons button {
+            padding: 10px 20px;
+            margin: 5px;
+            border: 1px solid #0bceaf;
+            /* Border outline */
+            border-radius: 30px;
+            /* Rounded corners */
+            background-color: transparent;
+            /* Transparent background */
+            color: #0bceaf;
+            /* Text color */
+            cursor: pointer;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .filter-buttons button.active,
+        .filter-buttons button:hover {
+            background-color: #0bceaf;
+            /* Filled background when active or hovered */
+            color: white;
+        }
+
+        /* Gallery and Image Styling */
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .gallery-item {
+            position: relative;
+            margin: 10px;
+            overflow: hidden;
+            width: calc(25% - 20px);
+            /* Image size depending on screen */
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            /* Ensure images fill their containers */
+            display: block;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Hover Icon Styling */
+        .hover-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: none;
+            /* Hidden initially */
+            font-size: 1.5rem;
+            color: white;
+            /* White icon color */
+            text-decoration: none;
+            background-color: #0bceaf;
+            /* Circular background color */
+            padding: 15px;
+            border-radius: 50%;
+            /* Make the background circular */
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+            /* Add shadow for visibility */
+        }
+
+        .gallery-item:hover .hover-icon {
+            display: block;
+            /* Show icon on hover */
+        }
+
+        /* Media Queries for Responsiveness */
+        @media screen and (max-width: 1024px) {
+            .gallery-item {
+                width: calc(33.33% - 20px);
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .gallery-item {
+                width: calc(50% - 20px);
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .gallery-item {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <!-- Navbar Start -->
+    <nav class="navbar fixed-top shadow-sm navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-lg-5">
+        <!-- <a href="index.html" class="navbar-brand ml-lg-3">
+            <h1 class="m-0 display-5"><span class="text-primary">Code</span>Journey</h1>
+        </a> -->
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse px-lg-3" id="navbarCollapse">
+            <div class="navbar-nav m-auto py-0">
+                <a href="index.html#home" class="nav-item nav-link active">Home</a>
+                <a href="#about" class="nav-item nav-link">About</a>
+                <a href="index.html#qualification" class="nav-item nav-link">Expericence</a>
+                <a href="#skill" class="nav-item nav-link">Skill</a>
+                <a href="#service" class="nav-item nav-link">Service</a>
+                <a href="#portfolio" class="nav-item nav-link">Portfolio</a>
+                <!-- <a href="#testimonial" class="nav-item nav-link">Review</a>
+                <a href="#blog" class="nav-item nav-link">Blog</a> -->
+                <a href="#contact" class="nav-item nav-link">Contact</a>
+            </div>
+            <a href="mailto:kapthuara.jayasanka@gmail.com?subject=Contact%20Us"
+                class="btn btn-outline-primary d-none d-lg-block">Hire Me</a>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Protfolio Start -->
+    <div class="row align-items-center justify-content-center">
+        <div class="row filter-buttons" style="margin-top: 100px;">
+            <button data-filter="all" class="active">All</button>
+            <button data-filter="mobile">Mobile</button>
+            <button data-filter="web">Web</button>
+        </div>
+    </div>
+    <div class="gallery">
+        <div class="gallery-item mobile">
+            <img src="img/fms.png" alt="">
+            <a href="exp_army.html" class="hover-icon"><i class="fas fa-link"></i></a>
+        </div>
+        <div class="gallery-item web">
+            <img src="img/web3.png" alt="">
+            <a href="exp_dburn.html#orantaholidays" class="hover-icon"><i class="fas fa-link"></i></a>
+        </div>
+        <div class="gallery-item mobile">
+            <img src="img/ration.png" alt="">
+            <a href="exp_army.html" class="hover-icon"><i class="fas fa-link"></i></a>
+        </div>
+        <div class="gallery-item mobile">
+            <img src="img/ds.png" alt="">
+            <a href="exp_army.html" class="hover-icon"><i class="fas fa-link"></i></a>
+        </div>
+
+        <div class="gallery-item mobile">
+            <img src="img/med.png" alt="">
+            <a href="#" class="hover-icon"><i class="fas fa-link"></i></a>
+        </div>
+        <div class="gallery-item web">
+            <img src="img/web2.png" alt="">
+            <a href="exp_dburn.html#ikautocare" class="hover-icon"><i class="fas fa-link"></i></a>
+        </div>
+    </div>
+
+
+    <!-- Portfolio End -->
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-primary text-white mt-5 py-5 px-sm-3 px-md-5">
+        <div class="container text-center py-5">
+            <div class="d-flex justify-content-center mb-4">
+                <a class="btn btn-light btn-social mr-2" href="https://www.linkedin.com/in/kapthura-jayasanka-b944446b/"
+                    target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a class="btn btn-light btn-social mr-2" href="https://github.com/Kapthura" target="_blank"
+                    rel="noopener noreferrer">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+            <p class="m-0">&copy; <a class="text-white font-weight-bold" href="#">Kapthura.github.io</a>. All Rights
+                Reserved.
+                Designed and Developed by <a class="text-white font-weight-bold" href="#">Kapthura Jayasanka</a>
+            </p>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const filterButtons = document.querySelectorAll('.filter-buttons button');
+            const galleryItems = document.querySelectorAll('.gallery-item');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Remove 'active' class from all buttons
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    // Add 'active' class to the clicked button
+                    button.classList.add('active');
+
+                    const filter = button.getAttribute('data-filter');
+                    galleryItems.forEach(item => {
+                        if (filter === 'all' || item.classList.contains(filter)) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+
+
+
+    </script>
+</body>
+
+</html>
