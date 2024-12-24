@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MP3 Player</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f9f9f9;
+        }
+        .container {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background: #fff;
+        }
+        audio {
+            width: 100%;
+            margin: 10px 0;
+        }
+        a {
+            text-decoration: none;
+            color: #007BFF;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>MP3 Player and Downloader</h1>
+
+    <div class="container">
+        <h3>Track 1</h3>
+        <!-- Embed for playback -->
+        <audio controls>
+            <source src="https://docs.google.com/uc?export=open&id=11cJiRF0Yc5N9Bfy30nevnfYyel5F1Wd_" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <!-- Download link -->
+        <a href="https://drive.google.com/uc?export=download&id=11cJiRF0Yc5N9Bfy30nevnfYyel5F1Wd_" download>Download Track 1</a>
+    </div>
+</body>
+</html>
