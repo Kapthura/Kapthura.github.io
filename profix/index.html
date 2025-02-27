@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/logo-elec.png" type="image/icon type">
+    <title>ProFix Electricians | Reliable Electrical Services for Homes & Businesses</title>
+    <meta name="description"
+        content="ProFix Electricians offers reliable, affordable, and professional electrical services for residential and commercial needs. Call us today for a free quote!">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        h1,
+        h2,
+        h3 {
+            color: #2c3e50;
+        }
+
+        a {
+            text-decoration: none;
+            color: #3498db;
+        }
+
+        /* Sticky Navigation Bar */
+        /* Navigation Bar */
+        nav {
+            position: sticky;
+            top: 0;
+            background-color: #2c3e50;
+            padding: 10px 20px;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Hamburger Icon */
+        .hamburger {
+            display: none;
+            /* Hidden by default on larger screens */
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background-color: #fff;
+            margin: 4px 0;
+            transition: 0.4s;
+        }
+
+        /* Navigation Bar */
+        nav {
+            position: sticky;
+            top: 0;
+            background-color: #2c3e50;
+            padding: 10px 20px;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Hamburger Icon */
+        .hamburger {
+            display: none;
+            /* Hidden by default on larger screens */
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background-color: #fff;
+            margin: 4px 0;
+            transition: 0.4s;
+        }
+
+        /* Navigation Links */
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links li {
+            margin: 0 20px;
+        }
+
+        .navbar-brand {
+            color: #fff;
+            font-size: 1.1rem;
+        }
+
+        .nav-links li a {
+            color: #fff;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            transition: color 0.3s;
+        }
+
+        .nav-links li a:hover {
+            color: #3498db;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .hamburger {
+                display: flex;
+                /* Show hamburger icon on small screens */
+            }
+
+            .nav-links {
+                display: none;
+                /* Hide navigation links by default on small screens */
+                flex-direction: column;
+                background-color: #2c3e50;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                text-align: center;
+            }
+
+            .nav-links.active {
+                display: flex;
+                /* Show navigation links when active */
+            }
+
+            .nav-links li {
+                margin: 15px 0;
+            }
+        }
+
+        /* Header Section */
+        header {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            overflow: hidden;
+        }
+
+        header video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        header .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 0;
+        }
+
+        header .content {
+            z-index: 1;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        header .cta-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        header .cta-buttons a {
+            background: #3498db;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            transition: background 0.3s;
+        }
+
+        header .cta-buttons a:hover {
+            background: #2980b9;
+        }
+
+        /* Introduction Section */
+        .intro {
+            padding: 60px 20px;
+            text-align: center;
+            background: #f9f9f9;
+        }
+
+        .intro h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .intro p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 30px;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 60px 20px;
+            background: #fff;
+            text-align: center;
+        }
+
+        .services h2 {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .service-card {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-card i {
+            font-size: 2rem;
+            color: #3498db;
+            margin-bottom: 15px;
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .service-card p {
+            font-size: 1rem;
+            margin-bottom: 20px;
+        }
+
+        /* Why Choose Us Section */
+        .why-choose-us {
+            padding: 60px 20px;
+            background: #f9f9f9;
+            text-align: center;
+        }
+
+        .why-choose-us h2 {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+        }
+
+        .reasons-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .reason-card {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .reason-card i {
+            font-size: 2rem;
+            color: #3498db;
+            margin-bottom: 15px;
+        }
+
+        .reason-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .reason-card p {
+            font-size: 1rem;
+        }
+
+        /* About Us Section */
+        .about-us {
+            padding: 60px 20px;
+            background: #fff;
+            text-align: center;
+        }
+
+        .about-us h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .about-us p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 60px 20px;
+            background: #f9f9f9;
+            text-align: center;
+        }
+
+        .contact h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .contact form {
+            max-width: 600px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .contact form input,
+        .contact form textarea {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .contact form button {
+            background: #3498db;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .contact form button:hover {
+            background: #2980b9;
+        }
+
+        .service-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px 10px 0 0;
+        }
+
+        /* Footer Section */
+        footer {
+            padding: 20px;
+            background: #2c3e50;
+            color: #fff;
+            text-align: center;
+        }
+
+        .reason-card i {
+            font-size: 2rem;
+            color: #3498db;
+            margin-bottom: 15px;
+        }
+
+        /* Contact Information Section */
+        .contact-info {
+            padding: 60px 20px;
+            background: #fff;
+            text-align: center;
+        }
+
+        .contact-info h2 {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            color: #2c3e50;
+        }
+
+        .contact-details {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+
+        .contact-item i {
+            font-size: 1.5rem;
+            color: #3498db;
+        }
+
+        .contact-item p {
+            margin: 0;
+            font-size: 1.1rem;
+            color: #333;
+        }
+
+        .contact-item a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        .contact-item a:hover {
+            text-decoration: underline;
+        }
+
+        footer a {
+            color: #3498db;
+        }
+
+        /* Logo */
+        .navbar-brand img {
+            height: 40px;
+            /* Adjust based on your design */
+            width: auto;
+            /* Maintain aspect ratio */
+        }
+
+        /* Responsive Logo */
+        @media (max-width: 768px) {
+            .navbar-brand img {
+                height: 40px;
+                /* Smaller logo for mobile */
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Sticky Navigation Bar -->
+    <nav>
+        <div class="nav-container">
+            <!-- Logo -->
+            <a class="navbar-brand" href="#home">
+                <img src="images/logo.png" alt="ProFix Electricians Logo" class="logo">
+            </a>
+
+            <!-- Hamburger Icon -->
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <!-- Navigation Links -->
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#why-choose-us">Why Choose Us</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <header id="home">
+        <video autoplay muted loop>
+            <source src="hero_video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="overlay"></div>
+        <div class="content">
+            <h1 style="color: #fff;">Your Trusted Electricians</h1>
+            <p>Reliable, Affordable, and Professional Electrical Services</p>
+            <div class="cta-buttons">
+                <a style="background-color: green;" href="https://wa.me/+94773094666" target="_blank"><i
+                        class="fab fa-whatsapp"></i> WhatsApp</a>
+                <a href="tel:+94773094666"><i class="fas fa-phone"></i> Call Now</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Introduction Section -->
+    <section class="intro">
+        <h2>Welcome to ProFix Electricians</h2>
+        <p>We provide top-notch electrical services for residential and commercial properties. Our team of licensed
+            electricians ensures safety, quality, and customer satisfaction.</p>
+        <div class="cta-buttons">
+            <a style="color: green;" href="https://wa.me/+94773094666" target="_blank"><i class="fab fa-whatsapp"></i>
+                WhatsApp</a>
+            <a href="tel:+94773094666"><i class="fas fa-phone"></i> Call Now</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <h2>Our Services</h2>
+        <div class="services-grid">
+            <!-- Service Card 1: Planning and Design -->
+            <div class="service-card">
+                <img src="images/plan.jpg" alt="Planning and Design" class="service-image">
+                <h3>Planning and Design</h3>
+                <p>We provide expert planning and design services for electrical systems, ensuring optimal functionality
+                    and
+                    safety for your projects.</p>
+
+            </div>
+            <!-- Service Card 2: Residential Wiring -->
+            <div class="service-card">
+                <img src="images/service2.jpg" alt="Residential Wiring" class="service-image">
+                <h3>Residential Wiring</h3>
+                <p>We provide safe and efficient wiring solutions for homes, ensuring your electrical systems are up to
+                    code and
+                    functioning perfectly.</p>
+
+            </div>
+
+            <!-- Service Card 3: Commercial Electrical Work -->
+            <!--
+            <div class="service-card">
+                <img src="images/s3.png" alt="Commercial Electrical Work" class="service-image">
+                <h3>Commercial Electrical Work</h3>
+                <p>From office buildings to retail spaces, we handle all commercial electrical installations and repairs
+                    with
+                    precision and expertise.</p>
+
+            </div>
+-->
+
+
+            <!-- Service Card 4: Lighting Installation -->
+            <div class="service-card">
+                <img src="images/lighting.jpg" alt="Lighting Installation" class="service-image">
+                <h3>Lighting Installation</h3>
+                <p>Enhance your space with modern, energy-efficient lighting solutions tailored to your needs.</p>
+
+            </div>
+
+            <!-- Service Card 5: Inspections & Repairs -->
+            <div class="service-card">
+                <img src="images/hero3.jpeg" alt="Electrical Inspections" class="service-image">
+                <h3>Inspections & Repairs</h3>
+                <p>We handle urgent electrical issues and provide comprehensive inspections to ensure your systems are
+                    safe,
+                    efficient, and up to code</p>
+
+            </div>
+
+            <!-- Service Card 6: Panel Upgrades -->
+            <div class="service-card">
+                <img src="images/hero1.jpeg" alt="Panel Upgrades" class="service-image">
+                <h3>Panel Upgrades</h3>
+                <p>Upgrade your electrical panel to meet the demands of modern appliances and ensure safety.</p>
+                <!-- <div class="cta-buttons">
+          <a href="https://wa.me/+94773094666" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+          <a href="tel:+94773094666"><i class="fas fa-phone"></i> Call Now</a>
+        </div> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-choose-us" id="why-choose-us">
+        <h2>Why Choose Us?</h2>
+        <div class="reasons-grid">
+            <!-- Reason 1: Experienced Professionals -->
+            <div class="reason-card">
+                <i class="fas fa-user-tie"></i>
+                <h3>Experienced Professionals</h3>
+                <p>Our team has years of experience handling all types of electrical projects, ensuring top-quality work
+                    every
+                    time.</p>
+            </div>
+
+            <!-- Reason 2: Affordable Pricing -->
+            <div class="reason-card">
+                <i class="fas fa-dollar-sign"></i>
+                <h3>Affordable Pricing</h3>
+                <p>We offer competitive rates without compromising on quality, making our services accessible to
+                    everyone.</p>
+            </div>
+
+            <!-- Reason 3: Reliable Emergency Services -->
+            <div class="reason-card">
+                <i class="fas fa-clock"></i>
+                <h3>Reliable Emergency Services</h3>
+                <p>We provide prompt and dependable emergency services during business hours to ensure your electrical
+                    systems
+                    are safe and functional.
+                </p>
+            </div>
+
+            <!-- Reason 4: Customer Satisfaction -->
+            <div class="reason-card">
+                <i class="fas fa-smile"></i>
+                <h3>Customer Satisfaction</h3>
+                <p>Your satisfaction is our priority. We go the extra mile to ensure you’re happy with our work.</p>
+            </div>
+
+            <!-- Reason 5: Advanced Technology -->
+            <div class="reason-card">
+                <i class="fas fa-tools"></i>
+                <h3>Advanced Technology</h3>
+                <p>We use the latest tools and technology to deliver efficient and reliable electrical solutions.</p>
+            </div>
+
+            <!-- Reason 6: Eco-Friendly Solutions -->
+            <div class="reason-card">
+                <i class="fas fa-leaf"></i>
+                <h3>Eco-Friendly Solutions</h3>
+                <p>We provide energy-efficient solutions to help you save on electricity bills and reduce your carbon
+                    footprint.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="about-us" id="about">
+        <h2>About Us</h2>
+        <p>ProFix Electricians is dedicated to providing top-notch electrical services designed to meet your specific
+            needs.
+            Our team is focused on delivering reliable, efficient, and high-quality solutions that ensure safety and
+            satisfaction every time</p>
+    </section>
+
+    <!-- Contact Section -->
+    <!-- <section class="contact">
+    <h2>Contact Us</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <input type="tel" placeholder="Your Phone Number" required>
+      <textarea placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+  -->
+
+    <!-- Contact Information Section -->
+    <section class="contact-info" id="contact">
+        <h2>Contact Information</h2>
+        <div class="contact-details">
+            <div class="contact-item">
+                <i class="fas fa-user"></i>
+                <p><strong>Name:</strong> Kapthura Jayasanka</p>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-phone"></i>
+                <p><strong>Phone:</strong> <a href="tel:+9477309466">+94 773 094 666</a></p>
+            </div>
+            <div class="contact-item">
+                <i class="fab fa-whatsapp"></i>
+                <p><strong>WhatsApp:</strong> <a href="https://wa.me/94773094666" target="_blank">+94 773 094 666</a>
+                </p>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <p><strong>Email:</strong> <a href="mailto:kapthura.public@gmail.com">kapthura.public@gmail.com</a></p>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <p><strong>Address:</strong> Kandy, Sri Lanka</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2023 ProFix Electricians. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Toggle Navigation Links
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
+
+        // Function to toggle the menu
+        hamburger.addEventListener('click', (e) => {
+            e.stopPropagation(); // Prevent the click from bubbling up to the document
+            navLinks.classList.toggle('active');
+        });
+
+        // Function to close the menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!navLinks.contains(e.target) && !hamburger.contains(e.target)) {
+                navLinks.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+
+</html>
